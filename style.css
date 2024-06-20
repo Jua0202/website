@@ -1,0 +1,306 @@
+/* Custom Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+/* Menggunakan Font Awesome dari CDN */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Color Palette */
+:root {
+    --primary-color: #8b0000; /* Maroon primary color */
+    --secondary-color: #808080; /* Gray secondary color */
+    --accent-color: #d30c0c; /* Accent color */
+    --success-color: #28a745; /* Success or positive action color */
+    --warning-color: #ffc107; /* Warning or attention color */
+    --danger-color: #dc3545; /* Danger or error color */
+    --light-color: #f8f9fa; /* Light background color */
+    --dark-color: #343a40; /* Dark background color */
+    --font-family: 'Roboto Condensed', Arial, sans-serif; /* Custom font family */
+}
+
+.content-section {
+    display: none;
+}
+
+#content-container {
+    margin: 20px 0;
+}
+
+header, footer {
+    text-align: center;
+}
+
+.contact-container ul li {
+    margin: 10px 0;
+}
+
+
+
+/* General Reset and Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family) !important;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--dark-color);
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: var(--font-family);
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700; /* Bold font weight */
+}
+
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--dark-color);
+    color: #ffffff;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
+/* Section Styles */
+section {
+    font-family: var(--font-family);
+    padding: 2rem;
+    background-color: #ffffff;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Styles */
+.project {
+    font-family: var(--font-family);
+    margin-bottom: 1rem;
+}
+
+.project-image {
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+}
+
+/* experience Styles */
+.experience {
+    font-family: var(--font-family);
+    margin-bottom: 1rem;
+}
+
+.experience-image {
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-image:hover {
+    transform: scale(1.05);
+}
+
+/* Profile Photo Styles */
+.profile-photo {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.profile-photo:hover {
+    border-color: var(--secondary-color); /* Change border color on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Change box shadow on hover */
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Form Styles */
+.crud-forms {
+    font-family: var(--font-family);
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.crud-forms form {
+    font-family: var(--font-family);
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.crud-forms form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.crud-forms form input,
+.crud-forms form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.crud-forms form button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.crud-forms form button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Contact Styles */
+.contact-container {
+    font-family: var(--font-family);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--light-color); 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-family: var(--font-family);
+    color: var(--primary-color); 
+}
+
+#contact ul {
+    font-family: var(--font-family);
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#contact ul li {
+    margin-bottom: 0.5rem;
+}
+
+#contact ul li a {
+    font-family: var(--font-family);
+    color: var(--secondary-color); 
+    text-decoration: none;
+    transition: color 0.3s; 
+}
+
+#contact ul li a:hover {
+    color: var(--accent-color); 
+}
+
+/*------css for small screens-----*/
+@media only screen and (max-width: 600px) {
+    /* General Adjustments for Small Screens */
+
+    body {
+        font-size: 14px; 
+    }
+
+    header h1 {
+        font-size: 2rem; 
+    }
+
+    nav ul li {
+        margin: 0.5rem 0; 
+    }
+
+    .project-image {
+        max-width: 100%; 
+    }
+
+    .profile-photo {
+        width: 200px; 
+        height: 200px;
+    }
+
+    .crud-forms form {
+        padding: 1rem; 
+    }
+
+    .crud-forms form input,
+    .crud-forms form textarea {
+        font-size: 0.9rem; 
+    }
+
+    .contact-container {
+        max-width: 100%; 
+        padding: 1rem; 
+    }
+
+    #contact ul li {
+        margin-bottom: 0.25rem; 
+    }
+
+}
